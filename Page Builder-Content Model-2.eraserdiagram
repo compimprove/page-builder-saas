@@ -1,0 +1,96 @@
+entity-relationship-diagram
+
+title Content Model
+
+Website [icon: globe, color: blue] {
+  id string pk
+}
+
+Page [icon: file-text, color: green] {
+  id string pk
+  blocks json
+  website_id string
+  path string
+  title string
+}
+
+Block [icon: block, color: green] {
+  id string pk
+  block_id string
+  params string
+}
+
+Product [icon: shopping-cart, color: orange] {
+  id string pk
+  website_id string
+  name string
+  price decimal
+  description text
+  stock integer
+}
+
+Order [icon: receipt, color: red] {
+  id string pk
+  website_id string
+  user_id string
+  items json
+  total decimal
+  status string
+  created_at datetime
+}
+
+User [icon: user, color: indigo] {
+  id string pk
+  website_id string
+  email string
+  name string
+  created_at datetime
+}
+
+Cart [icon: shopping-bag, color: yellow] {
+  id string pk
+  website_id string
+  user_id string
+  items json
+  total decimal
+  created_at datetime
+}
+
+BlogPost [icon: edit, color: teal] {
+  id string pk
+  website_id string
+  title string
+  content text
+  published_at datetime
+}
+
+Contact [icon: mail, color: purple] {
+  id string pk
+  website_id string
+  name string
+  email string
+  message text
+  created_at datetime
+}
+
+File [icon: file, color: gray] {
+  id string pk
+  website_id string
+  name string
+  path string
+  size integer
+  mime_type string
+  created_at datetime
+}
+
+Website.id < Page.website_id
+Page.blocks < Block
+Website.id < Product.website_id
+Website.id < Contact.website_id
+Website.id < Cart.user_id
+Website.id < Order.website_id
+Website.id < User.website_id
+Website.id < BlogPost.website_id
+Website.id < File.website_id
+User.id < Cart.user_id
+User.id < Order.user_id

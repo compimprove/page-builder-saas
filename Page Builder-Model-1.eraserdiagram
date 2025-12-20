@@ -1,0 +1,46 @@
+entity-relationship-diagram
+
+title Model
+
+
+
+Page [icon: file-text, color: green] {
+  id string pk
+  blocks json
+  websiteId string
+  path string
+}
+
+Product [icon: shopping-cart, color: orange] {
+  id string pk
+  websiteId string
+  name string
+  price decimal
+  description text
+}
+
+Website [icon: globe, color: blue] {
+  id string pk
+  name string
+  domain string
+  billing_status string
+}
+
+Block [icon: block, color: green] {
+  id string pk
+  type string
+  block_id string
+  params string
+}
+
+TemplateBlock [icon: block, color: orange] {
+  id string pk
+  type enum
+  html string
+  default_params string
+}
+
+Website.id < Page.websiteId
+Website.id < Product.websiteId
+Page.blocks < Block
+TemplateBlock.id < Block.block_id

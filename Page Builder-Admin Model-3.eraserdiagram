@@ -1,0 +1,37 @@
+entity-relationship-diagram
+
+notation chen
+title Admin Model
+
+Website [icon: globe, color: blue] {
+  id string pk
+  name string
+  custom_domain string
+  prefix_domain string
+  billing_status string
+  plan string
+}
+
+TemplateWebsite [icon: globe, color: orange] {
+  id string pk
+  name string
+  author string
+  version number
+}
+
+TemplatePage [icon: package, color: orange] {
+  id string pk
+  path string
+  template_id string
+}
+
+TemplateBlock [icon: block, color: orange] {
+  id string pk
+  type enum
+  html string
+  default_params string
+}
+
+TemplateBlock <> TemplatePage
+TemplateWebsite.id < TemplatePage.template_id
+
