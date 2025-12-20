@@ -1,14 +1,12 @@
 entity-relationship-diagram
 
-title Admin Model
+title Model
 
 Website [icon: globe, color: blue] {
   id string pk
   name string
   custom_domain string
   prefix_domain string
-  billing_status string
-  plan string
 }
 
 TemplateWebsite [icon: globe, color: orange] {
@@ -31,6 +29,21 @@ TemplateBlock [icon: block, color: orange] {
   default_params string
 }
 
+Page [icon: file-text, color: green] {
+  id string pk
+  blocks json
+  website_id string
+  path string
+  title string
+}
+
+Block [icon: block, color: green] {
+  id string pk
+  block_id string
+  params string
+}
+
 TemplateBlock <> TemplatePage
 TemplateWebsite.id < TemplatePage.template_id
-
+Website.id < Page.website_id
+Page.blocks < Block
