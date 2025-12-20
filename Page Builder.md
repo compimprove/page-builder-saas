@@ -82,7 +82,7 @@ Hệ thống Web Builder SaaS cho phép người dùng tạo website nhanh chón
 
     - Cho rằng mỗi visit blog/company/landing mất 5 DB query, mỗi ecommerce visit mất 10 DB query
         - Query:
-            - Blog/Landing: **28,400,000 queries/day **
+            - Blog/Landing: **28,400,000 queries/day**
             - E-commerce: **90,250,000 queries/day**
             - => 118,650,000 queries/day = **~1,373 queries/second, peak x 3 ~ 4k query/second**
 
@@ -95,22 +95,22 @@ Hệ thống Web Builder SaaS cho phép người dùng tạo website nhanh chón
 
 
 
-![Highlevel architecture](/.eraser/aMz8oRWJzptFhYK6wvNx___mwaSmXiQHibHjUS2HrVs23OrXqt2___---figure---UL54IHwcaT70bQx_sAwK8---figure---bS86xj6PkxPG7OVnf7QB7Q.png "Highlevel architecture")
+![Highlevel architecture](/.eraser/aMz8oRWJzptFhYK6wvNx___mwaSmXiQHibHjUS2HrVs23OrXqt2___---figure---6GdUD0F1yfc_ubXFcEbXJ---figure---bS86xj6PkxPG7OVnf7QB7Q.png "Highlevel architecture")
 
 ### 4.1 Phân tích flow khách hàng tạo website
-![Tạo website](/.eraser/aMz8oRWJzptFhYK6wvNx___mwaSmXiQHibHjUS2HrVs23OrXqt2___---figure---9PKooenOkxhtdDFBuoiOe---figure---S3e5pB4Y7i7qVvJLQ_glyA.png "Tạo website")
+![Tạo website](/.eraser/aMz8oRWJzptFhYK6wvNx___mwaSmXiQHibHjUS2HrVs23OrXqt2___---figure---vCvxorSyvVus6lC2idnXY---figure---S3e5pB4Y7i7qVvJLQ_glyA.png "Tạo website")
 
 
 
 ### 4.2 Phân tích flow khách hàng truy cập trang web
-![Truy cập trang web](/.eraser/aMz8oRWJzptFhYK6wvNx___mwaSmXiQHibHjUS2HrVs23OrXqt2___---figure---V6TT1clHuOXkvEEFdaIyb---figure---uOLoyD8-8A_OEPr5S4QQJw.png "Truy cập trang web")
+![Truy cập trang web](/.eraser/aMz8oRWJzptFhYK6wvNx___mwaSmXiQHibHjUS2HrVs23OrXqt2___---figure---psCcUdXLx88b0E-4HSJRp---figure---uOLoyD8-8A_OEPr5S4QQJw.png "Truy cập trang web")
 
 
 
 ## 5. Database Design
-![Admin Model](/.eraser/aMz8oRWJzptFhYK6wvNx___mwaSmXiQHibHjUS2HrVs23OrXqt2___---diagram---mPwuL4BxbmMtPWlN2J9Lk---diagram---dAMVNnsxZUnYN7S3MqK-hg.png "Admin Model")
+![Admin Model](/.eraser/aMz8oRWJzptFhYK6wvNx___mwaSmXiQHibHjUS2HrVs23OrXqt2___---diagram---rSZwIL8xpGT-fWm-rmN5D---diagram---dAMVNnsxZUnYN7S3MqK-hg.png "Admin Model")
 
-![Content Model](/.eraser/aMz8oRWJzptFhYK6wvNx___mwaSmXiQHibHjUS2HrVs23OrXqt2___---diagram---KN2PAiBEbhCfaBHEdzJXD---diagram---4SYAVnLhHCATNTnmMIsZpQ.png "Content Model")
+![Content Model](/.eraser/aMz8oRWJzptFhYK6wvNx___mwaSmXiQHibHjUS2HrVs23OrXqt2___---diagram---W1zQoyMlgjVNSjVS1xTIX---diagram---4SYAVnLhHCATNTnmMIsZpQ.png "Content Model")
 
 
 
