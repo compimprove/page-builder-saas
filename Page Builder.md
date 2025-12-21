@@ -95,22 +95,29 @@ Hệ thống Web Builder SaaS cho phép người dùng tạo website nhanh chón
 
 
 
-![Highlevel architecture](/.eraser/aMz8oRWJzptFhYK6wvNx___mwaSmXiQHibHjUS2HrVs23OrXqt2___---figure---6GdUD0F1yfc_ubXFcEbXJ---figure---bS86xj6PkxPG7OVnf7QB7Q.png "Highlevel architecture")
+![Highlevel architecture](/.eraser/aMz8oRWJzptFhYK6wvNx___mwaSmXiQHibHjUS2HrVs23OrXqt2___---figure---GwhPzkTFUnpSRzBQZcR4b---figure---bS86xj6PkxPG7OVnf7QB7Q.png "Highlevel architecture")
 
 ### 4.1 Phân tích flow khách hàng tạo website
-![Tạo website](/.eraser/aMz8oRWJzptFhYK6wvNx___mwaSmXiQHibHjUS2HrVs23OrXqt2___---figure---vCvxorSyvVus6lC2idnXY---figure---S3e5pB4Y7i7qVvJLQ_glyA.png "Tạo website")
+![Tạo website](/.eraser/aMz8oRWJzptFhYK6wvNx___mwaSmXiQHibHjUS2HrVs23OrXqt2___---figure---OY4RWJcbAQ89XojbgZlvw---figure---S3e5pB4Y7i7qVvJLQ_glyA.png "Tạo website")
 
 
 
 ### 4.2 Phân tích flow khách hàng truy cập trang web
-![Truy cập trang web](/.eraser/aMz8oRWJzptFhYK6wvNx___mwaSmXiQHibHjUS2HrVs23OrXqt2___---figure---psCcUdXLx88b0E-4HSJRp---figure---uOLoyD8-8A_OEPr5S4QQJw.png "Truy cập trang web")
+![Truy cập trang web](/.eraser/aMz8oRWJzptFhYK6wvNx___mwaSmXiQHibHjUS2HrVs23OrXqt2___---figure---0pwVAl2yUKGHkgb_P0yC9---figure---uOLoyD8-8A_OEPr5S4QQJw.png "Truy cập trang web")
 
 
 
-## 5. Database Design
-![Admin Model](/.eraser/aMz8oRWJzptFhYK6wvNx___mwaSmXiQHibHjUS2HrVs23OrXqt2___---diagram---rSZwIL8xpGT-fWm-rmN5D---diagram---dAMVNnsxZUnYN7S3MqK-hg.png "Admin Model")
+## 5. Database
+Kế hoạch scaling:
 
-![Content Model](/.eraser/aMz8oRWJzptFhYK6wvNx___mwaSmXiQHibHjUS2HrVs23OrXqt2___---diagram---W1zQoyMlgjVNSjVS1xTIX---diagram---4SYAVnLhHCATNTnmMIsZpQ.png "Content Model")
+- Bắt đầu với một instance + tunning Index đầy đủ
+- Mở rộng thêm read replication khi lượng website tăng và cần read nhiều.
+- Mở rộng thêm nhiều database node, sử dụng application level sharding khi muốn phân tách các website trung bình và website premium.
+
+
+![Admin Model](/.eraser/aMz8oRWJzptFhYK6wvNx___mwaSmXiQHibHjUS2HrVs23OrXqt2___---diagram---VFefgL6GuWKd3ISafOkvm---diagram---dAMVNnsxZUnYN7S3MqK-hg.png "Admin Model")
+
+![Content Model](/.eraser/aMz8oRWJzptFhYK6wvNx___mwaSmXiQHibHjUS2HrVs23OrXqt2___---diagram---w9azJQr6TO5JnsTZlu3EL---diagram---4SYAVnLhHCATNTnmMIsZpQ.png "Content Model")
 
 
 
