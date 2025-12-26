@@ -95,15 +95,15 @@ Hệ thống Web Builder SaaS cho phép người dùng tạo website nhanh chón
 
 
 
-![Highlevel architecture](/.eraser/aMz8oRWJzptFhYK6wvNx___mwaSmXiQHibHjUS2HrVs23OrXqt2___---figure---8pWlgnu1xL--ZuBiRa55E---figure---bS86xj6PkxPG7OVnf7QB7Q.png "Highlevel architecture")
+![Highlevel architecture](/.eraser/aMz8oRWJzptFhYK6wvNx___mwaSmXiQHibHjUS2HrVs23OrXqt2___---figure---Ks0FnoP8JOEeCNMcyD7aq---figure---bS86xj6PkxPG7OVnf7QB7Q.png "Highlevel architecture")
 
 ### 4.1 Phân tích flow khách hàng tạo website
-![Tạo website](/.eraser/aMz8oRWJzptFhYK6wvNx___mwaSmXiQHibHjUS2HrVs23OrXqt2___---figure---101-SVHR0DqTb2-FUEao6---figure---S3e5pB4Y7i7qVvJLQ_glyA.png "Tạo website")
+![Tạo website](/.eraser/aMz8oRWJzptFhYK6wvNx___mwaSmXiQHibHjUS2HrVs23OrXqt2___---figure---hpQqQAs1p6tooU0ySn6A8---figure---S3e5pB4Y7i7qVvJLQ_glyA.png "Tạo website")
 
 
 
 ### 4.2 Phân tích flow khách hàng truy cập trang web
-![Truy cập trang web](/.eraser/aMz8oRWJzptFhYK6wvNx___mwaSmXiQHibHjUS2HrVs23OrXqt2___---figure---42ji6N5BezDw1_PsE-CuX---figure---uOLoyD8-8A_OEPr5S4QQJw.png "Truy cập trang web")
+![Truy cập trang web](/.eraser/aMz8oRWJzptFhYK6wvNx___mwaSmXiQHibHjUS2HrVs23OrXqt2___---figure---ZKilaDBErEf2N0dV92Mlr---figure---uOLoyD8-8A_OEPr5S4QQJw.png "Truy cập trang web")
 
 
 
@@ -115,9 +115,21 @@ Kế hoạch scaling:
 - Mở rộng thêm nhiều database node, sử dụng application level sharding khi muốn phân tách các website trung bình và website premium.
 
 
-![Admin Model](/.eraser/aMz8oRWJzptFhYK6wvNx___mwaSmXiQHibHjUS2HrVs23OrXqt2___---diagram---60vkavZ0ZlGufHNHT9Dnj---diagram---dAMVNnsxZUnYN7S3MqK-hg.png "Admin Model")
+![Admin Model](/.eraser/aMz8oRWJzptFhYK6wvNx___mwaSmXiQHibHjUS2HrVs23OrXqt2___---diagram---UY-MBxaTeZVmfZBCM9CbH---diagram---dAMVNnsxZUnYN7S3MqK-hg.png "Admin Model")
 
-![Content Model](/.eraser/aMz8oRWJzptFhYK6wvNx___mwaSmXiQHibHjUS2HrVs23OrXqt2___---diagram---VI25A_c15xz9FninMNWGM---diagram---4SYAVnLhHCATNTnmMIsZpQ.png "Content Model")
+![Content Model](/.eraser/aMz8oRWJzptFhYK6wvNx___mwaSmXiQHibHjUS2HrVs23OrXqt2___---diagram---Yi33D-F-rnadCshLjizyW---diagram---4SYAVnLhHCATNTnmMIsZpQ.png "Content Model")
+
+## 6. Kiến trúc theo từng giai đoạn:
+![6.1](/.eraser/aMz8oRWJzptFhYK6wvNx___mwaSmXiQHibHjUS2HrVs23OrXqt2___---figure---pqr0B4--GKHZmw8u3_XxL---figure---K7lQe1dsX5QaybtLrz31Ww.png "6.1")
+
+- Bắt đầu với mô hình đơn giản gồm LB, Redis, 2 Server, CDN và DB
+
+
+![6.2](/.eraser/aMz8oRWJzptFhYK6wvNx___mwaSmXiQHibHjUS2HrVs23OrXqt2___---figure---Zc0GFOyhScxqIhvRddoDg---figure---6g4XHso7KXMv_0rbInZN9g.png "6.2")
+
+
+
+![6.3](/.eraser/aMz8oRWJzptFhYK6wvNx___mwaSmXiQHibHjUS2HrVs23OrXqt2___---figure---a5HiD7Z9nEtbdyjJgRXdb---figure---J53B5REGbvgwWhrpE_sGUQ.png "6.3")
 
 
 
