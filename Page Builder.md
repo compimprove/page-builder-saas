@@ -5,9 +5,9 @@
 Hệ thống Web Builder SaaS cho phép người dùng tạo website nhanh chóng dựa trên template có sẵn, không cần kiến thức kỹ thuật, đồng thời hỗ trợ mở rộng tính năng thông qua plugin và tích hợp dịch vụ bên thứ ba.
 
 ### 1.2 Đối tượng sử dụng (Target Users)
-- **Khách hàng cuối:** tạo và quản trị website của riêng mình
+- **Khách hàng:** tạo và quản trị website của riêng mình
 - **Quản trị viên hệ thống (Admin):** quản lý nền tảng, template, plugin, gói dịch vụ
-- **Đội vận hành nội bộ:** giám sát, bảo trì và hỗ trợ kỹ thuật
+- **Người dùng cuối:** Người dùng duyệt website, đọc blog, mua hàng.
 ### 1.3 Mục tiêu & Phạm vi (Goals & Scope)
 **Trong phạm vi:**
 
@@ -95,15 +95,15 @@ Hệ thống Web Builder SaaS cho phép người dùng tạo website nhanh chón
 
 
 
-![Highlevel architecture](/.eraser/aMz8oRWJzptFhYK6wvNx___mwaSmXiQHibHjUS2HrVs23OrXqt2___---figure---Ks0FnoP8JOEeCNMcyD7aq---figure---bS86xj6PkxPG7OVnf7QB7Q.png "Highlevel architecture")
+![Highlevel architecture](/.eraser/aMz8oRWJzptFhYK6wvNx___mwaSmXiQHibHjUS2HrVs23OrXqt2___---figure---0Ds6NGSLz5MNDPBZ-uJWG---figure---bS86xj6PkxPG7OVnf7QB7Q.png "Highlevel architecture")
 
 ### 4.1 Phân tích flow khách hàng tạo website
-![Tạo website](/.eraser/aMz8oRWJzptFhYK6wvNx___mwaSmXiQHibHjUS2HrVs23OrXqt2___---figure---hpQqQAs1p6tooU0ySn6A8---figure---S3e5pB4Y7i7qVvJLQ_glyA.png "Tạo website")
+![Tạo website](/.eraser/aMz8oRWJzptFhYK6wvNx___mwaSmXiQHibHjUS2HrVs23OrXqt2___---figure---TNd1gnsnfyBr2BXRnDVxi---figure---S3e5pB4Y7i7qVvJLQ_glyA.png "Tạo website")
 
 
 
 ### 4.2 Phân tích flow khách hàng truy cập trang web
-![Truy cập trang web](/.eraser/aMz8oRWJzptFhYK6wvNx___mwaSmXiQHibHjUS2HrVs23OrXqt2___---figure---ZKilaDBErEf2N0dV92Mlr---figure---uOLoyD8-8A_OEPr5S4QQJw.png "Truy cập trang web")
+![Truy cập trang web](/.eraser/aMz8oRWJzptFhYK6wvNx___mwaSmXiQHibHjUS2HrVs23OrXqt2___---figure---Q8LQ93QPPem5bBTFEaUMu---figure---uOLoyD8-8A_OEPr5S4QQJw.png "Truy cập trang web")
 
 
 
@@ -115,21 +115,21 @@ Kế hoạch scaling:
 - Mở rộng thêm nhiều database node, sử dụng application level sharding khi muốn phân tách các website trung bình và website premium.
 
 
-![Admin Model](/.eraser/aMz8oRWJzptFhYK6wvNx___mwaSmXiQHibHjUS2HrVs23OrXqt2___---diagram---UY-MBxaTeZVmfZBCM9CbH---diagram---dAMVNnsxZUnYN7S3MqK-hg.png "Admin Model")
+![Admin Model](/.eraser/aMz8oRWJzptFhYK6wvNx___mwaSmXiQHibHjUS2HrVs23OrXqt2___---diagram---ce2EaysqyqNt6nQH-6Jp8---diagram---dAMVNnsxZUnYN7S3MqK-hg.png "Admin Model")
 
-![Content Model](/.eraser/aMz8oRWJzptFhYK6wvNx___mwaSmXiQHibHjUS2HrVs23OrXqt2___---diagram---Yi33D-F-rnadCshLjizyW---diagram---4SYAVnLhHCATNTnmMIsZpQ.png "Content Model")
+![Content Model](/.eraser/aMz8oRWJzptFhYK6wvNx___mwaSmXiQHibHjUS2HrVs23OrXqt2___---diagram---Tc98XvcPiWv1GI6nCvMsk---diagram---4SYAVnLhHCATNTnmMIsZpQ.png "Content Model")
 
 ## 6. Kiến trúc theo từng giai đoạn:
-![6.1](/.eraser/aMz8oRWJzptFhYK6wvNx___mwaSmXiQHibHjUS2HrVs23OrXqt2___---figure---pqr0B4--GKHZmw8u3_XxL---figure---K7lQe1dsX5QaybtLrz31Ww.png "6.1")
+![6.1](/.eraser/aMz8oRWJzptFhYK6wvNx___mwaSmXiQHibHjUS2HrVs23OrXqt2___---figure---dJexDCMVU8pNKMT9GM8n3---figure---K7lQe1dsX5QaybtLrz31Ww.png "6.1")
 
 - Bắt đầu với mô hình đơn giản gồm LB, Redis, 2 Server, CDN và DB
 
 
-![6.2](/.eraser/aMz8oRWJzptFhYK6wvNx___mwaSmXiQHibHjUS2HrVs23OrXqt2___---figure---Zc0GFOyhScxqIhvRddoDg---figure---6g4XHso7KXMv_0rbInZN9g.png "6.2")
+![6.2](/.eraser/aMz8oRWJzptFhYK6wvNx___mwaSmXiQHibHjUS2HrVs23OrXqt2___---figure---YtgG6D6SK1o4MJ3yfSaq7---figure---6g4XHso7KXMv_0rbInZN9g.png "6.2")
 
 
 
-![6.3](/.eraser/aMz8oRWJzptFhYK6wvNx___mwaSmXiQHibHjUS2HrVs23OrXqt2___---figure---a5HiD7Z9nEtbdyjJgRXdb---figure---J53B5REGbvgwWhrpE_sGUQ.png "6.3")
+![6.3](/.eraser/aMz8oRWJzptFhYK6wvNx___mwaSmXiQHibHjUS2HrVs23OrXqt2___---figure---B_bkSc5zS-IaIxScpyf5----figure---J53B5REGbvgwWhrpE_sGUQ.png "6.3")
 
 
 
