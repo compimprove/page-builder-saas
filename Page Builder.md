@@ -61,8 +61,6 @@ Hệ thống Web Builder SaaS cho phép người dùng tạo website nhanh chón
  Chịu lỗi, retry, không ảnh hưởng website khách khi deploy
 - **Khả năng bảo trì (Maintainability):**
  Logging tập trung, monitoring, backup & restore, dễ nâng cấp
-- **Tuân thủ (Compliance):**
- Sẵn sàng đáp ứng GDPR và các tiêu chuẩn bảo mật phổ biến khi mở rộng
 ## 4. High-Level Architecture
 - Microservice với kubernetes
 - Ước tính quy mô 100k website dựa trên các platform tương tự:
@@ -95,15 +93,15 @@ Hệ thống Web Builder SaaS cho phép người dùng tạo website nhanh chón
 
 
 
-![Highlevel architecture](/.eraser/aMz8oRWJzptFhYK6wvNx___mwaSmXiQHibHjUS2HrVs23OrXqt2___---figure---0Ds6NGSLz5MNDPBZ-uJWG---figure---bS86xj6PkxPG7OVnf7QB7Q.png "Highlevel architecture")
+![Highlevel architecture](/.eraser/aMz8oRWJzptFhYK6wvNx___mwaSmXiQHibHjUS2HrVs23OrXqt2___---figure---fdZadPjHOwEr3CGvUjIs----figure---bS86xj6PkxPG7OVnf7QB7Q.png "Highlevel architecture")
 
 ### 4.1 Phân tích flow khách hàng tạo website
-![Tạo website](/.eraser/aMz8oRWJzptFhYK6wvNx___mwaSmXiQHibHjUS2HrVs23OrXqt2___---figure---TNd1gnsnfyBr2BXRnDVxi---figure---S3e5pB4Y7i7qVvJLQ_glyA.png "Tạo website")
+![Tạo website](/.eraser/aMz8oRWJzptFhYK6wvNx___mwaSmXiQHibHjUS2HrVs23OrXqt2___---figure---jirJDK4LsrrLvpmO_5col---figure---S3e5pB4Y7i7qVvJLQ_glyA.png "Tạo website")
 
 
 
 ### 4.2 Phân tích flow khách hàng truy cập trang web
-![Truy cập trang web](/.eraser/aMz8oRWJzptFhYK6wvNx___mwaSmXiQHibHjUS2HrVs23OrXqt2___---figure---Q8LQ93QPPem5bBTFEaUMu---figure---uOLoyD8-8A_OEPr5S4QQJw.png "Truy cập trang web")
+![Truy cập trang web](/.eraser/aMz8oRWJzptFhYK6wvNx___mwaSmXiQHibHjUS2HrVs23OrXqt2___---figure---ypbFwDztq9HQgqdFGFuaL---figure---uOLoyD8-8A_OEPr5S4QQJw.png "Truy cập trang web")
 
 
 
@@ -115,21 +113,21 @@ Kế hoạch scaling:
 - Mở rộng thêm nhiều database node, sử dụng application level sharding khi muốn phân tách các website trung bình và website premium.
 
 
-![Admin Model](/.eraser/aMz8oRWJzptFhYK6wvNx___mwaSmXiQHibHjUS2HrVs23OrXqt2___---diagram---ce2EaysqyqNt6nQH-6Jp8---diagram---dAMVNnsxZUnYN7S3MqK-hg.png "Admin Model")
+![Admin Model](/.eraser/aMz8oRWJzptFhYK6wvNx___mwaSmXiQHibHjUS2HrVs23OrXqt2___---diagram---qeWJOglB7kjLfp6MIIoAG---diagram---dAMVNnsxZUnYN7S3MqK-hg.png "Admin Model")
 
-![Content Model](/.eraser/aMz8oRWJzptFhYK6wvNx___mwaSmXiQHibHjUS2HrVs23OrXqt2___---diagram---Tc98XvcPiWv1GI6nCvMsk---diagram---4SYAVnLhHCATNTnmMIsZpQ.png "Content Model")
+![Content Model](/.eraser/aMz8oRWJzptFhYK6wvNx___mwaSmXiQHibHjUS2HrVs23OrXqt2___---diagram---hMZ9M4fnhGe5cnrq4qqMG---diagram---4SYAVnLhHCATNTnmMIsZpQ.png "Content Model")
 
 ## 6. Kiến trúc theo từng giai đoạn:
-![6.1](/.eraser/aMz8oRWJzptFhYK6wvNx___mwaSmXiQHibHjUS2HrVs23OrXqt2___---figure---dJexDCMVU8pNKMT9GM8n3---figure---K7lQe1dsX5QaybtLrz31Ww.png "6.1")
+![6.1](/.eraser/aMz8oRWJzptFhYK6wvNx___mwaSmXiQHibHjUS2HrVs23OrXqt2___---figure---yvrt_yoYwDFcED9RcHxAi---figure---K7lQe1dsX5QaybtLrz31Ww.png "6.1")
 
 - Bắt đầu với mô hình đơn giản gồm LB, Redis, 2 Server, CDN và DB
 
 
-![6.2](/.eraser/aMz8oRWJzptFhYK6wvNx___mwaSmXiQHibHjUS2HrVs23OrXqt2___---figure---YtgG6D6SK1o4MJ3yfSaq7---figure---6g4XHso7KXMv_0rbInZN9g.png "6.2")
+![6.2](/.eraser/aMz8oRWJzptFhYK6wvNx___mwaSmXiQHibHjUS2HrVs23OrXqt2___---figure---jywVLOMF9S2_8wBREnCY0---figure---6g4XHso7KXMv_0rbInZN9g.png "6.2")
 
 
 
-![6.3](/.eraser/aMz8oRWJzptFhYK6wvNx___mwaSmXiQHibHjUS2HrVs23OrXqt2___---figure---B_bkSc5zS-IaIxScpyf5----figure---J53B5REGbvgwWhrpE_sGUQ.png "6.3")
+![6.3](/.eraser/aMz8oRWJzptFhYK6wvNx___mwaSmXiQHibHjUS2HrVs23OrXqt2___---figure---YLoi8hJ3piAj8P63JdqPu---figure---J53B5REGbvgwWhrpE_sGUQ.png "6.3")
 
 
 
